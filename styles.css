@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameTitle{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: rgb(0, 190, 76);
+    /* word-spacing: .3rem; */
+    letter-spacing: .4rem;
+}
+
+#container{
+    padding: .1rem;
+    width: 20rem;
+    display: flex;
+    gap: .2rem;
+    flex-wrap: wrap;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background-color: rgb(38, 221, 117);
+    font-size: 4rem;
+    color: white;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winnerText{
+    font-size: 1.5rem;
+    text-align: center;
+    width:100%;
+    margin-top: .3rem;
+}
+
+.box:not(.x):not(.o):hover{
+    background-color: rgb(23, 193, 97);
+}
+
+.box.x{
+    background-color: rgb(38, 200, 117) ;
+}
+
+.box.o{
+    background-color: rgb(38, 220, 117) ;
+}
+
+.x::before{
+    content: "X";
+}
+
+.o::before{
+    content: "O";
+}
+
+.resetGame{
+    font-size: 1.1rem;
+    padding: .4rem 0;
+    width: 6rem;
+    border: none;
+    background-color: rgb(239, 115, 0);
+    color: white;
+    border-radius: .3rem;
+    transition-duration: 500ms;
+    margin-top: 1rem;
+}
+
+.resetGame:not(:active):hover{
+    scale: 1.1;
+
+}
+
+.resetGame:active{
+    scale: 0.8;
+}
+
